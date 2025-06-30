@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover premium beauty products at GlowBeauty - Your ultimate destination for skincare, makeup, and wellness products." />
+  <meta name="keywords" content="beauty products, skincare, makeup, wellness, online beauty store" />
+  <meta name="author" content="GlowBeauty" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="GlowBeauty - Your Beauty Destination" />
+  <meta property="og:description" content="Discover premium beauty products for radiant skin and stunning looks. Shop the latest trends in skincare and makeup!" />
+  <meta property="og:image" content="https://example.com/images/hero-banner.jpg" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:type" content="website" />
+
+  <title>GlowBeauty - Your Beauty Destination</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+    }
+
+    /* Header & Navigation */
+    .header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #ff3f6c;
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: #ff3f6c;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-bar {
+      position: relative;
+      width: 300px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px 40px 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+      font-size: 14px;
+    }
+
+    .search-bar i {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #666;
+    }
+
+    .nav-icon {
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .nav-icon:hover {
+      color: #ff3f6c;
+    }
+
+    .cart-badge {
+      position: relative;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: #ff3f6c;
+      color: white;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #ff3f6c;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #e62e5c;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 63, 108, 0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .btn-secondary:hover {
+      background: #fff;
+      color: #ff3f6c;
+    }
+
+    /* Categories Section */
+    .categories {
+      padding: 80px 0;
+      background: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .category-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #ff9a9e, #fecfef);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 30px;
+      color: white;
+    }
+
+    .category-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .category-card p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Products Section */
+    .products {
+      padding: 80px 0;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 250px;
+      background: linear-gradient(135deg, #ff9a9e, #fecfef);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      color: white;
+      position: relative;
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: #ff3f6c;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .product-brand {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .current-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ff3f6c;
+    }
+
+    .original-price {
+      color: #999;
+      text-decoration: line-through;
+      font-size: 0.9rem;
+    }
+
+    .discount {
+      background: #ff3f6c;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 15px;
+    }
+
+    .stars {
+      color: #ffd700;
+    }
+
+    .rating-text {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .add-to-cart {
+      width: 100%;
+      padding: 12px;
+      background: #ff3f6c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background: #e62e5c;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .testimonial-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: white;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: #667eea;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .testimonial-location {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Newsletter */
+    .newsletter {
+      padding: 60px 0;
+      background: #f8f9fa;
+      text-align: center;
+    }
+
+    .newsletter-content {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .newsletter h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .newsletter p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .newsletter-form button {
+      padding: 15px 25px;
+      background: #ff3f6c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      background: #e62e5c;
+    }
+
+    /* Footer */
+    .footer {
+      background: #1a1a1a;
+      color: white;
+      padding: 60px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h4 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #ff3f6c;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: #ff3f6c;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: #333;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: #ff3f6c;
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      color: #ccc;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+      
+      .search-bar {
+        width: 200px;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .search-bar {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <nav class="nav">
+        <a href="#" class="logo">GlowBeauty</a>
+        
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#offers">Offers</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <div class="search-bar">
+            <input type="text" placeholder="Search for products, brands and more...">
+            <i class="fas fa-search"></i>
+          </div>
+          
+          <div class="nav-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          
+          <div class="nav-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          
+          <div class="nav-icon cart-badge">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">3</span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Discover Your Perfect Glow</h1>
+      <p>Explore premium beauty products from top brands. From skincare essentials to makeup must-haves, find everything you need to enhance your natural beauty.</p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary">Shop Now</a>
+        <a href="#categories" class="btn btn-secondary">Explore Categories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-title">
+        <h2>Shop by Category</h2>
+        <p>Find exactly what you're looking for in our curated categories</p>
+      </div>
+      
+      <div class="category-grid">
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-spa"></i>
+          </div>
+          <h3>Skincare</h3>
+          <p>Cleansers, moisturizers, serums, and treatments for radiant skin</p>
+        </div>
+        
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3>Makeup</h3>
+          <p>Foundation, lipsticks, eyeshadows, and beauty essentials</p>
+        </div>
+        
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-spray-can"></i>
+          </div>
+          <h3>Fragrances</h3>
+          <p>Perfumes, body mists, and aromatic delights</p>
+        </div>
+        
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-cut"></i>
+          </div>
+          <h3>Hair Care</h3>
+          <p>Shampoos, conditioners, and styling products</p>
+        </div>
+        
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-bath"></i>
+          </div>
+          <h3>Bath & Body</h3>
+          <p>Soaps, lotions, and body care essentials</p>
+        </div>
+        
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h3>Luxury</h3>
+          <p>Premium beauty products and exclusive collections</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>Trending Products</h2>
+        <p>Discover the most popular beauty products loved by our customers</p>
+      </div>
+      
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <i class="fas fa-tint"></i>
+            <span class="product-badge">BESTSELLER</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">RadiantGlow Serum</h3>
+            <p class="product-brand">GlowBeauty</p>
+            <div class="product-price">
+              <span class="current-price">₹1,299</span>
+              <span class="original-price">₹1,999</span>
+              <span class="discount">35% OFF</span>
+            </div>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-text">(2.4k reviews)</span>
+            </div>
+            <button class="add-to-cart">Add to Bag</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <i class="fas fa-magic"></i>
+            <span class="product-badge">NEW</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Matte Lipstick Collection</h3>
+            <p class="product-brand">Lakme</p>
+            <div class="product-price">
+              <span class="current-price">₹599</span>
+              <span class="original-price">₹799</span>
+              <span class="discount">25% OFF</span>
+            </div>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="rating-text">(1.8k reviews)</span>
+            </div>
+            <button class="add-to-cart">Add to Bag</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Natural Face Cream</h3>
+            <p class="product-brand">The Body Shop</p>
+            <div class="product-price">
+              <span class="current-price">₹899</span>
+              <span class="original-price">₹1,199</span>
+              <span class="discount">25% OFF</span>
+            </div>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-text">(3.1k reviews)</span>
+            </div>
+            <button class="add-to-cart">Add to Bag</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <i class="fas fa-eye"></i>
+            <span class="product-badge">HOT</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Kajal & Eyeliner</h3>
+            <p class="product-brand">Maybelline</p>
+            <div class="product-price">
+              <span class="current-price">₹399</span>
+              <span class="original-price">₹599</span>
+              <span class="discount">33% OFF</span>
+            </div>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-text">(4.2k reviews)</span>
+            </div>
+            <button class="add-to-cart">Add to Bag</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <i class="fas fa-wind"></i>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Perfume Mist</h3>
+            <p class="product-brand">Victoria's Secret</p>
+            <div class="product-price">
+              <span class="current-price">₹1,499</span>
+              <span class="original-price">₹2,199</span>
+              <span class="discount">32% OFF</span>
+            </div>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="rating-text">(1.5k reviews)</span>
+            </div>
+            <button class="add-to-cart">Add to Bag</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <i class="fas fa-pump-soap"></i>
+            <span class="product-badge">POPULAR</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Face Wash Gel</h3>
+            <p class="product-brand">Neutrogena</p>
+            <div class="product-price">
+              <span class="current-price">₹699</span>
+              <span class="original-price">₹999</span>
+              <span class="discount">30% OFF</span>
+            </div>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-text">(5.6k reviews)</span>
+            </div>
+            <button class="add-to-cart">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Our Customers Say</h2>
+        <p>Real reviews from real customers who love our products</p>
+      </div>
+      
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <p class="testimonial-text">"The RadiantGlow serum has completely transformed my skin! I've never felt more confident. The delivery was super fast and the packaging was beautiful."</p>
+          <h4 class="testimonial-author">Priya Sharma</h4>
+          <p class="testimonial-location">Mumbai, Maharashtra</p>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <p class="testimonial-text">"Amazing collection of makeup products! The quality is outstanding and the prices are unbeatable. GlowBeauty is now my go-to beauty destination."</p>
+          <h4 class="testimonial-author">Neha Patel</h4>
+          <p class="testimonial-location">Delhi, NCR</p>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <p class="testimonial-text">"Customer service is exceptional! They helped me find the perfect skincare routine for my skin type. Highly recommend to everyone!"</p>
+          <h4 class="testimonial-author">Anjali Reddy</h4>
+          <p class="testimonial-location">Bangalore, Karnataka</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h3>Stay in the Loop</h3>
+        <p>Subscribe to our newsletter for exclusive offers, beauty tips, and new product launches</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>GlowBeauty</h4>
+          <p>Your ultimate destination for premium beauty products. Discover the latest trends in skincare, makeup, and wellness.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#">Skincare</a></li>
+            <li><a href="#">Makeup</a></li>
+            <li><a href="#">Fragrances</a></li>
+            <li><a href="#">Hair Care</a></li>
+            <li><a href="#">Bath & Body</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">Find a Store</a></li>
+            <li><a href="#">Legal & Privacy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Corporate Responsibility</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Investor Relations</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 GlowBeauty. All rights reserved. | Terms of Service | Privacy Policy</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Add to cart functionality
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', function() {
+        const productName = this.closest('.product-card').querySelector('.product-title').textContent;
+        alert(`${productName} added to your bag!`);
+        
+        // Update cart count
+        const cartCount = document.querySelector('.cart-count');
+        let currentCount = parseInt(cartCount.textContent);
+        cartCount.textContent = currentCount + 1;
+      });
+    });
+
+    // Newsletter subscription
+    document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      alert(`Thank you for subscribing with ${email}! You'll receive our latest updates soon.`);
+      this.reset();
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Search functionality
+    document.querySelector('.search-bar input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        const searchTerm = this.value;
+        if (searchTerm.trim()) {
+          alert(`Searching for: ${searchTerm}`);
+        }
+      }
+    });
+
+    // Category card hover effects
+    document.querySelectorAll('.category-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const category = this.querySelector('h3').textContent;
+        alert(`Browsing ${category} category...`);
+      });
+    });
+  </script>
+</body>
+</html>
